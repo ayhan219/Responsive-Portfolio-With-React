@@ -1,0 +1,77 @@
+.navbar-container {
+    width: calc(100% - 80px);
+    height: 100px;
+    margin: 0 40px;
+    background-color: rgba(0, 0, 0, 0.5); /* Şeffaf siyah arka plan */
+    backdrop-filter: blur(10px); /* Blurlu arka plan efekti */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px; /* Köşeleri yuvarlama */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Gölge efekti */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 30px;
+    font-size: larger;
+}
+
+.navbar-left h4 {
+    font-size: 25px;
+    color: white;
+    font-weight: bold; /* Yazı tipini kalınlaştırma */
+    cursor: pointer;
+}
+
+.navbar-icon {
+    font-size: 30px;
+    color: white;
+    transition: transform 0.3s ease; /* İkonlara hover animasyonu */
+}
+
+.navbar-left {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    transition: color 0.3s ease; /* Yazıya hover animasyonu */
+}
+
+.navbar-right a:hover {
+    color: #FFD700; /* Yazı rengini hover'da değiştirir */
+}
+
+.navbar-icon:hover {
+    transform: scale(1.1); /* İkonlara hover'da büyüme efekti */
+}
+
+@media (max-width:800px) {
+    .navbar-right a {
+        font-size: 20px
+    }
+    .navbar-left h4{
+        font-size: 15px;
+    }
+    .navbar-icon{
+        font-size: 15px
+    }
+}
+@media (max-width:615px) {
+    .navbar-left h4{
+        display: none;
+    }
+    .navbar-right a {
+        font-size: 12px
+    }
+    .navbar-left h4{
+        font-size: 12px;
+    }
+}

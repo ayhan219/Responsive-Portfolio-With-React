@@ -1,0 +1,93 @@
+.projects-container {
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(68, 68, 68);
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between project containers */
+    height: 100vh; /* Ensure container takes full viewport height */
+    align-items: center; /* Center items vertically */
+    overflow-y: auto; /* Enable scrolling if content exceeds viewport height */
+}
+
+.projects-area {
+    width: calc(33.333% - 20px); /* Three projects per row with gap adjustment */
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures no overflow from borders or rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-area:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.project-container {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.project-container img {
+    width: 100%; /* Image takes full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    transition: opacity 0.3s; /* Animation for hover effect */
+}
+
+.projects-area:hover .project-container img {
+    opacity: 0.9; /* Slight fade on hover */
+}
+
+.projects-area h3 {
+    margin: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    color: #333;
+    transition: color 0.3s; /* Animation for text color on hover */
+}
+
+.projects-area:hover h3 {
+    color: #007bff; /* Change text color on hover */
+}
+
+.github-area {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.github-area h3 {
+    color: white;
+    font-size: 2.3em;
+    margin: 10px 0;
+    animation: fadeIn 2s; /* Animation for the GitHub section */
+}
+
+.github-area span {
+    color: #007bff; /* GitHub color */
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width:800px) {
+    .projects-container{
+        flex-direction: column;
+    }
+}
